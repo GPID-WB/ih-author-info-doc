@@ -1,0 +1,56 @@
+---
+title: "PIP Innovation Hub - Authors Information"
+author: Global Porverty & Inequality Data Group (GPID)
+format: 
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    toc-expand: true
+    toc-title: CONTENTS
+    theme: default
+    number-sections: true
+editor: visual
+---
+
+## Overview {.unnumbered}
+
+The *PIP Innovation Hub* is thought to be home for innovative work on poverty measurement, displaying experimental estimates using alternative methods to those currently shown in PIP. The Hub will showcase these estimates in an interactive dashboard, display the methodological notes, and link to any associated papers to highlight the work further.
+
+## About the Innovation Hub
+
+The objective of PIP Innovation Hub is to foster innovation, by providing poverty and inequality estimates that use alternative methods to tackle some of the biggest measurement challenges, and show the impact of different methodological decisions.
+
+Some of the main criteria for showcased work include:
+
+-   Methods should be "generalizible", that is, that provide global or regional estimates of poverty, or that span a large number of countries (i.e., not country-specific innovations).
+
+-   must describe the issue with current poverty and inequality estimates intended to be addressed;
+
+-   estimates must be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates;
+
+-   must be uploaded to the Development Data Hub with metadata and description to guide users;
+
+-   and must be described in a PRWP, a Global Poverty Monitoring Technical Note (GPMTN), or a published paper.
+
+## Submission Requirements
+
+Authors that wish to showcase their work in PIP Innovation Hub are required to submit three main inputs: 1) a `.dta` file fulfilling the stated requirements with the global, regional and/or country-level poverty estimates produced from their method; 2) metadata information; and 3), a brief methodological note. The details and specific formats of each component are described as follows:
+
+### Data file
+
+`.xlsx` file
+
+### Metadata file
+
+`metadata_template.xlsx`
+
+### Methodological Note
+
+`.tex` file.
+
+## Submission Portal
+
+The inputs described in the previous section must be submitted through the following portal:
+
+\[URL: \]
