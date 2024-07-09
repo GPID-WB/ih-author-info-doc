@@ -1,5 +1,6 @@
 ---
-title: "PIP Innovation Hub - Authors Information"
+title: "PIP Innovation Hub"
+subtitle: "Information for Authors: Submission steps"
 author: Global Porverty & Inequality Data Group (GPID)
 format: 
   html:
@@ -15,7 +16,9 @@ editor: visual
 
 ## Overview {.unnumbered}
 
-The *PIP Innovation Hub* is thought to be home for innovative work on poverty measurement, displaying experimental estimates using alternative methods to those currently shown in PIP. The Hub will showcase these estimates in an interactive dashboard, display the methodological notes, and link to any associated papers to highlight the work further.
+The *PIP Innovation Hub* is intended to be a home for innovative work on poverty measurement, displaying experimental estimates using alternative methods to those currently shown in the [Poverty and Inequality Platform (PIP)](pip.worldbank.org). The Hub will showcase these estimates in an interactive dashboard, display the methodological notes, and link to any associated papers to highlight the work further.
+
+This document describes the specific inputs required from featured authors, in order to showcase their work.
 
 ## About the Innovation Hub
 
@@ -35,22 +38,38 @@ Some of the main criteria for showcased work include:
 
 ## Submission Requirements
 
-Authors that wish to showcase their work in PIP Innovation Hub are required to submit three main inputs: 1) a `.dta` file fulfilling the stated requirements with the global, regional and/or country-level poverty estimates produced from their method; 2) metadata information; and 3), a brief methodological note. The details and specific formats of each component are described as follows:
+Thank you for being part of PIP Innovation Hub!
+
+Authors wishing to showcase their work in PIP Innovation Hub are required to submit three main inputs: 1) a `.dta` file fulfilling the stated requirements with the global, regional and/or country-level poverty estimates produced from their method; 2) metadata information; and 3), a brief methodological note. The details and specific formats for each component are described as follows:
 
 ### Data file
 
-`.xlsx` file
+As stated above, data submitted must contain global and/or regional estimates of poverty or at least span many countries. It shoudl algo be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates Data must be submitted in `.dta` format. The following is a template with the specific columns and labels to be included:
+
+`dta_template.dta`
+
+\[[should we include a table with vars here?]{style="color:red"}\]
 
 ### Metadata file
+
+The metadata file consists on all relevant information on your paper such as title, description, dates, URLs, indicators and economies included/excluded, etc. This information must be submitted through an Excel file, filling out one single row with 21 columns:
 
 `metadata_template.xlsx`
 
 ### Methodological Note
 
-`.tex` file.
+Finally, authors should provide brief details on the approach in a methodological note, describing the issue with current poverty/inequality estimates it is trying to address. This note should not be longer than 3 paragraphs, and must include official link to paper.
+
+`methodological_note_template.tex`
 
 ## Submission Portal
 
-The inputs described in the previous section must be submitted through the following portal:
+Finally, the three inputs described in the previous section must be submitted through the following portal:
 
 \[URL: \]
+
+###  {.unnumbered}
+
+We thank you for your contributions and participation in PIP Innovation Hub!
+
+-The GPID Team
