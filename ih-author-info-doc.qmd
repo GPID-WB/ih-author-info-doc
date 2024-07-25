@@ -1,7 +1,7 @@
 ---
 title: "PIP Innovation Hub"
-subtitle: "Information for Authors: Submission steps"
-author: Global Porverty & Inequality Data Group (GPID)
+subtitle: "Information for authors: Submission steps"
+author: Global Poverty & Inequality Data (GPID) team
 format: 
   html:
     toc: true
@@ -14,51 +14,82 @@ format:
 editor: visual
 ---
 
-## Overview {.unnumbered}
 
-The *PIP Innovation Hub* is intended to be a home for innovative work on poverty measurement, displaying experimental estimates using alternative methods to those currently shown in the [Poverty and Inequality Platform (PIP)](pip.worldbank.org). The Hub will showcase these estimates in an interactive dashboard, display the methodological notes, and link to any associated papers to highlight the work further.
 
-This document describes the specific inputs required from featured authors, in order to showcase their work.
+This document is intended for authors whose work will be featured in the PIP Innovation Hub. Please read the submission requirements below and follow the steps to submit your work.
 
-## About the Innovation Hub
+## About the PIP Innovation Hub {.unnumbered}
 
-The objective of PIP Innovation Hub is to foster innovation, by providing poverty and inequality estimates that use alternative methods to tackle some of the biggest measurement challenges, and show the impact of different methodological decisions.
+The *PIP Innovation Hub*, to be launched at the Annual Meetings of the IMF and the World Bank on 25 October 2024, is intended to be a home for innovative work on poverty measurement. It will showcase new methods for poverty and inequality estimation that tackle some of the biggest measurement challenges. It will form a part of the [Poverty and Inequality Platform (PIP)](pip.worldbank.org), and will illustrate the impact of different methodological decisions by displaying experimental estimates using alternative methods to those currently shown in the PIP. The Hub will showcase these estimates in an interactive dashboard, display the methodological notes, and link to any associated papers to highlight the work further.
 
-Some of the main criteria for showcased work include:
 
--   Methods should be "generalizible", that is, that provide global or regional estimates of poverty, or that span a large number of countries (i.e., not country-specific innovations).
 
--   must describe the issue with current poverty and inequality estimates intended to be addressed;
+<!-- ## About the Innovation Hub -->
 
--   estimates must be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates;
+<!-- The objective of PIP Innovation Hub is to foster innovation by providing poverty and inequality estimates that use alternative methods to tackle some of the biggest measurement challenges. It will also show the impact of different methodological decisions. -->
 
--   must be uploaded to the Development Data Hub with metadata and description to guide users;
+<!-- Some of the main criteria for showcased work include: -->
 
--   and must be described in a PRWP, a Global Poverty Monitoring Technical Note (GPMTN), or a published paper.
+<!-- -   Methods should be "generalizible", that is, that provide global or regional estimates of poverty, or that span a large number of countries (i.e., not country-specific innovations). -->
+
+<!-- -   must describe the issue with current poverty and inequality estimates intended to be addressed; -->
+
+<!-- -   estimates must be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates; -->
+
+<!-- -   must be uploaded to the Development Data Hub with metadata and description to guide users; -->
+
+<!-- -   and must be described in a [World Bank Policy Research Working Paper](https://www.worldbank.org/en/research/brief/world-bank-policy-research-working-papers), a [Global Poverty Monitoring Technical Note (GPMTN)](https://ideas.repec.org/s/wbk/wbgpmt.html), or a published paper. -->
 
 ## Submission Requirements
 
 Thank you for being part of PIP Innovation Hub!
 
-Authors wishing to showcase their work in PIP Innovation Hub are required to submit three main inputs: 1) a `.dta` file fulfilling the stated requirements with the global, regional and/or country-level poverty estimates produced from their method; 2) metadata information; and 3), a brief methodological note. The details and specific formats for each component are described as follows:
+Authors wishing to showcase their work in PIP Innovation Hub are required to submit three main inputs: 
+
+1) A `.dta` file fulfilling the stated requirements with the global, regional and/or country-level poverty estimates produced from their method; 
+
+2) A `.xlsx` excel file containing metadata information; and 
+
+3) A `.md` file with a brief methodological note. 
+
+The details and specific formats for each component are described below.
 
 ### Data file
 
-As stated above, data submitted must contain global and/or regional estimates of poverty or at least span many countries. It shoudl algo be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates Data must be submitted in `.dta` format. The following is a template with the specific columns and labels to be included:
+The data, submitted in a `.dta` format, should contain the columns given in the excerpt below:
 
-`dta_template.dta`
+```{r echo = FALSE, warning=FALSE, message=FALSE,}
+library(fastverse)
+dir    <- "P:/04.GPID_team/PIP-innovation-hub/data-test"
+dt_pip <- haven::read_dta(fs::path(dir, 
+                                   "dt_pip.dta"))
+dt_pip |> 
+  fselect(code, 
+          year, 
+          reporting_level, 
+          welfare_type, 
+          poverty_line, 
+          headcount) |> 
+  fsubset(year == 2022) |> 
+  head()
+```
 
-\[[should we include a table with vars here?]{style="color:red"}\]
+An example, template file can be downloaded [here](https://pip.worldbank.org/home).
+The "code" should give the economy code or for regional aggregates it should be the region code, as seen [here](https://data.worldbank.org/country). The "headcount" should be a decimal between 0 and 1 giving the estimated poverty headcount. The poverty line should be in 2017$ PPP terms and there should, preferably, be three poverty lines per economy per year: \$2.15, \$3.65, and \$6.85
+
+The data should also be tagged to a particular PIP vintage to foster comparability and interoperability with the latest estimates. The PIP vintage will be specified in the metadata. 
+
+
 
 ### Metadata file
 
-The metadata file consists on all relevant information on your paper such as title, description, dates, URLs, indicators and economies included/excluded, etc. This information must be submitted through an Excel file, filling out one single row with 21 columns:
+The metadata file consists on all relevant information on your paper such as title, description, dates, URLs, indicators and economies included/excluded, etc. This information must be submitted through an excel file, `.xslx`, filling out one single row with 20 columns:
 
-`metadata_template.xlsx`
+The metadata template, with more detail on each entry, can be found [here](fake link).
 
 ### Methodological Note
 
-Finally, authors should provide brief details on the approach in a methodological note, describing the issue with current poverty/inequality estimates it is trying to address. This note should not be longer than 3 paragraphs, and must include official link to paper.
+Finally, authors should provide brief details on the approach in a methodological note, describing the issue with current poverty/inequality estimates it is trying to address. This note should not be longer than 2 paragraphs, and must include official link to paper. The note should be submitted in a `.md` format, and will be made available to all users of the Hub to read when they view the data.
 
 `methodological_note_template.tex`
 
